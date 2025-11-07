@@ -69,7 +69,7 @@ function cienPrimerosImpares() {
     alert(resultado);
 };
 
-/* 06. Sumar 5 números leídos por teclado - Mostrar resultado (Bucle) */
+/* 06. Sumar 5 números dados por el usuario */
 function sumarCincoNumeros() {
     let suma = 0;
 
