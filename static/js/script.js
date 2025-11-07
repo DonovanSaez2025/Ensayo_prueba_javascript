@@ -59,6 +59,7 @@ function cienPrimerosPares() {
 /* 05. Mostrar en alerta los 100 primeros números impares. (Bucle) */
 function cienPrimerosImpares() {
     let resultado = "Los 100 primeros números impares son: \n";
+
     for (let i = 1; i <= 100; i++) {
         if (i % 2 != 0) {
             resultado += ` ${i}`;
@@ -70,7 +71,7 @@ function cienPrimerosImpares() {
 
 /* 06. Sumar 5 números leídos por teclado - Mostrar resultado (Bucle) */
 function sumarCincoNumeros() {
-    let resultado = 0;
+    let suma = 0;
 
     for (let i = 1; i <= 5; i++) {
         let num = parseInt(prompt("Ingresa un número: "));
@@ -79,18 +80,18 @@ function sumarCincoNumeros() {
             alert("Ingrese valores válidos.");
             break; // Fuerza a que se rompa el bucle
         } else {
-            resultado += num;
+            suma += num;
         };
     };
 
-    alert(`El resultado es ${resultado}.`);
+    alert(`El resultado es ${suma}.`);
 };
 
 /* 07. Modificar el anterior para que permita 
 sumar N números leídos por teclado. El valor de N se debe leer previamente por teclado. */
 function sumarMasNumeros() {
     let limit = parseInt(prompt("Ingrese un número límite: "));
-    let resultado = 0;
+    let suma = 0;
 
     for (let i = 1; i <= limit; i++) {
         let num = parseInt(prompt("Ingresa un número: "));
@@ -99,17 +100,17 @@ function sumarMasNumeros() {
             alert("Ingrese valores válidos.");
             break;
         } else {
-            resultado += num;
+            suma += num;
         };
     };
 
-    alert(`El resultado es ${resultado}.`);
+    alert(`El resultado es ${suma}.`);
 };
 
 /* 08. Sumar N números pares. (Leídos por teclado) */
 function sumarNumerosPares() {
     let limit = parseInt(prompt("Ingrese un número límite: "));
-    let resultado = 0;
+    let suma = 0;
 
     for (let i = 1; i <= limit; i++) {
         let num = parseInt(prompt("Ingresa un número: "));
@@ -118,21 +119,41 @@ function sumarNumerosPares() {
             alert("Ingrese valores válidos y números pares.");
             break;
         } else {
-            resultado += num;
+            suma += num;
         };
     };
 
-    alert(`El resultado es ${resultado}.`);
+    alert(`El resultado es ${suma}.`);
 };
 
 /* 09. Sumar los N primeros pares. (Ej: N = 7 → Alerta: 2 + 4 + 6 = 12) */
 function sumarPrimerosPares() {
     let limit = parseInt(prompt("Ingrese un número límite: "));
-    let resultado = "Los ${limit} primeros números pares son: ";
+    let resultado = `Los ${limit} primeros números pares son:  `;
 
-    for (let i = 1; i <= num; i++) {
-        if (i % 2 == 0) {
-            resultado += ` ${i}`;
+    if (isNaN(limit)) {
+        alert("Ingrese un número válido.");
+    } else {
+        for (let i = 1; i <= num; i++) {
+            if (i % 2 == 0) {
+                resultado += ` ${i}`;
+            };
+        };
+    };
+
+    alert(resultado);
+};
+
+/* 10. Sumar los N primeros múltiplos de 3. */
+function sumarMultiplosTres() {
+    let num = parseInt(prompt("Ingrese un número: "));
+    let resultado = "El resultado es:";
+
+    if (isNaN(num)) {
+        alert("Ingrese un número válido.");
+    } else {
+        for (let i = 1; i <= num; i++) {
+            
         };
     };
 
