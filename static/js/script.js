@@ -22,10 +22,10 @@ function calculoDificil() {
         alert("Ingrese un número válido.");
     } else {
         alert(`El resultado es: (${num} / 3 + 10) * 2 = ${(num / 3 + 10) * 2}`);
-    }
+    };
 };
 
-/* 03. Calcular la suma de los N primeros números naturales. 
+/* 03. Calcular la suma de los N primeros números. 
 (N es ingresado por el usuario). Ejemplo: N=3 → alerta: 1 + 2 + 3 = 6 */
 function sumaNumeros() {
     let num = parseInt(prompt("Ingresa un número: "));
@@ -37,8 +37,8 @@ function sumaNumeros() {
     } else {
         for (let i = 1; i <= num; i++) {
             suma += i;
-            resultado += ` + ${suma}`;
-        }
+            resultado += ` + ${i}`;
+        };
 
         alert(`${resultado} = ${suma}`);
     };
@@ -49,7 +49,7 @@ function cienPrimerosPares() {
     let resultado = "Los 100 primeros números pares son: \n";
     for (let i = 1; i <= 100; i++) {
         if (i % 2 == 0) {
-            resultado += ` ${i}`;
+            resultado += `${i} `;
         };
     };
 
@@ -72,6 +72,7 @@ function cienPrimerosImpares() {
 /* 06. Sumar 5 números dados por el usuario */
 function sumarCincoNumeros() {
     let suma = 0;
+    let resultado = "El resultado es: 0"
 
     for (let i = 1; i <= 5; i++) {
         let num = parseInt(prompt("Ingresa un número: "));
@@ -81,10 +82,11 @@ function sumarCincoNumeros() {
             break; // Fuerza a que se rompa el bucle
         } else {
             suma += num;
+            resultado += ` + ${num}`;
         };
     };
 
-    alert(`El resultado es ${suma}.`);
+    alert(`${resultado} = ${suma}`);
 };
 
 /* 07. Modificar el anterior para que permita 
