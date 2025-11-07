@@ -147,15 +147,19 @@ function sumarPrimerosPares() {
 /* 10. Sumar los N primeros múltiplos de 3. */
 function sumarMultiplosTres() {
     let num = parseInt(prompt("Ingrese un número: "));
-    let resultado = "El resultado es:";
+    let resultado = "El resultado es: 0 ";
+    let suma = 0;
 
     if (isNaN(num)) {
         alert("Ingrese un número válido.");
     } else {
         for (let i = 1; i <= num; i++) {
-            
+            if (i % 3 == 0) {
+                resultado += `+ ${i} `;
+                suma += i;
+            };
         };
-    };
 
-    alert(resultado);
+        alert(`${resultado} = ${suma}`);
+    };
 };
