@@ -113,6 +113,7 @@ function sumarMasNumeros() {
 function sumarNumerosPares() {
     let limit = parseInt(prompt("Ingrese un número límite: "));
     let suma = 0;
+    let resultado = "El resultado es: 0"
 
     for (let i = 1; i <= limit; i++) {
         let num = parseInt(prompt("Ingresa un número: "));
@@ -122,18 +123,19 @@ function sumarNumerosPares() {
             break;
         } else {
             suma += num;
+            resultado += ` + ${num}`;
         };
     };
 
-    alert(`El resultado es ${suma}.`);
+    alert(`${resultado} = ${suma}`);
 };
 
 /* 09. Sumar los N primeros pares. (Ej: N = 7 → Alerta: 2 + 4 + 6 = 12) */
 function sumarPrimerosPares() {
-    let limit = parseInt(prompt("Ingrese un número límite: "));
-    let resultado = `Los ${limit} primeros números pares son:  `;
+    let num = parseInt(prompt("Ingrese un número límite: "));
+    let resultado = `Los ${num} primeros números pares son:`;
 
-    if (isNaN(limit)) {
+    if (isNaN(num)) {
         alert("Ingrese un número válido.");
     } else {
         for (let i = 1; i <= num; i++) {
