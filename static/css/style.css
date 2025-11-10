@@ -1,0 +1,35 @@
+/* Resetear estilos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cdebc7;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+header {
+    margin: 10px auto;
+}
+
+.row {
+    margin: 20px auto;
+}
+
+button {
+    margin-top: 10px;
+    padding: 7px;
+    background-color: #0009ff;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ff0000;
+    transition: background-color 0.2s;
+}

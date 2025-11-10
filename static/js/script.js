@@ -6,7 +6,9 @@ function mostrarDatos() {
     let apellidos = prompt("Ingresa tus apellidos: ");
     let edad = parseInt(prompt("Ingresa tu edad"));
 
-    if (isNaN(edad) || nombre == "" || apellidos == "") { // Verifica que la edad sea un valor número y que nombre y apellidos no estén vacíos
+    if (isNaN(edad) || nombre == null || apellidos == null) { // Verifica que la edad sea un valor número y que nombre y apellidos no sean nulos
+        alert("Ingrese datos válidos");
+    } else if (nombre == "" || apellidos == "") { // Verifica que nombre y apellidos no estén vacíos
         alert("Ingrese datos válidos");
     } else {
         alert(`Hola señor ${nombre} ${apellidos}, veo que usted tiene ${edad} años.`);
@@ -62,7 +64,7 @@ function cienPrimerosImpares() {
 
     for (let i = 1; i <= 100; i++) {
         if (i % 2 != 0) {
-            resultado += ` ${i}`;
+            resultado += `${i} `;
         };
     };
 
@@ -72,7 +74,7 @@ function cienPrimerosImpares() {
 /* 06. Sumar 5 números dados por el usuario */
 function sumarCincoNumeros() {
     let suma = 0;
-    let resultado = "El resultado es: 0"
+    let resultado = "El resultado es: 0";
 
     for (let i = 1; i <= 5; i++) {
         let num = parseInt(prompt("Ingresa un número: "));
@@ -93,20 +95,26 @@ function sumarCincoNumeros() {
 sumar N números leídos por teclado. El valor de N se debe leer previamente por teclado. */
 function sumarMasNumeros() {
     let limit = parseInt(prompt("Ingrese un número límite: "));
+    let resultado = "El resultado es: 0";
     let suma = 0;
 
-    for (let i = 1; i <= limit; i++) {
-        let num = parseInt(prompt("Ingresa un número: "));
+    if (isNaN(limit)) {
+        alert("Ingrese un número válido.");
+    } else {
+        for (let i = 1; i <= limit; i++) {
+            let num = parseInt(prompt("Ingresa un número: "));
 
-        if (isNaN(num)) {
-            alert("Ingrese valores válidos.");
-            break;
-        } else {
-            suma += num;
+            if (isNaN(num)) {
+                alert("Ingrese valores válidos.");
+                break;
+            } else {
+                resultado += ` + ${i}`;
+                suma += num;
+            };
         };
     };
 
-    alert(`El resultado es ${suma}.`);
+    alert(`${resultado} = ${suma}.`);
 };
 
 /* 08. Sumar N números pares. (Leídos por teclado) */
@@ -115,15 +123,19 @@ function sumarNumerosPares() {
     let suma = 0;
     let resultado = "El resultado es: 0"
 
-    for (let i = 1; i <= limit; i++) {
-        let num = parseInt(prompt("Ingresa un número: "));
+    if (isNaN(limit)) {
+        alert("Ingrese un número válido.");
+    } else {
+        for (let i = 1; i <= limit; i++) {
+            let num = parseInt(prompt("Ingresa un número: "));
 
-        if (isNaN(num) || num % 2 != 0) {
-            alert("Ingrese valores válidos y números pares.");
-            break;
-        } else {
-            suma += num;
-            resultado += ` + ${num}`;
+            if (isNaN(num) || num % 2 != 0) {
+                alert("Ingrese valores válidos y números pares.");
+                break;
+            } else {
+                suma += num;
+                resultado += ` + ${num}`;
+            };
         };
     };
 
